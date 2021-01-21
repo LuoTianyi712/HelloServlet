@@ -1,0 +1,6 @@
+rootProject.name = 'HelloServlet'
+include 'servlet-01'
+include 'servlet-02'
+include 'response'
+include 'request'
+

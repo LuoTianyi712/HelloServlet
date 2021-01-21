@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'com.neusoft'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+subprojects{
+    apply plugin: "java-library"
+    dependencies{
+        testImplementation group: 'junit', name: 'junit', version: '4.11'
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+        implementation(group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1')
+        implementation(group: 'javax.servlet.jsp', name: 'javax.servlet.jsp-api', version: '2.3.3')
+    }
+}
